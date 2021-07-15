@@ -1,0 +1,1 @@
+За основу взято: https://thecode.media/snake-js/
