@@ -192,6 +192,7 @@ function restart() {
     food = {
         x: Math.floor((Math.random() * 17 + 1)) * box,
         y: Math.floor((Math.random() * 15 + 3)) * box,
+        image: selectRandomFood(foodImages)
     };
 
     ctx.clearRect(0, 0, canvas.context.width, canvas.context.height);
