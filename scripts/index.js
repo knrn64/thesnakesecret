@@ -49,8 +49,6 @@ snake[0] = {
 
 let dir;
 
-let game_speed = 100;
-
 class sound {
     constructor(src) {
         this.sound = document.createElement("audio");
@@ -152,7 +150,6 @@ function drawGame() {
     if (snakeX == food.x && snakeY == food.y) {
         eatSound.play();
         score++;
-		game_speed--;
         food = {
             x: Math.floor((Math.random() * 17 + 1)) * box,
             y: Math.floor((Math.random() * 15 + 3)) * box,
@@ -182,13 +179,10 @@ function drawGame() {
 }
 
 function restart() {
-	game_speed = 100;
-
-	alert("your score: " + score);
     failSound.play();
 
     //console.log("function has been executed");
-
+    alert("your score: " + score);
     score = 0;
     dir = "";
 
@@ -211,4 +205,4 @@ function restart() {
     drawGame();
 }
 
-let game = setInterval(drawGame, game_speed);
+let game = setInterval(drawGame, 100);
