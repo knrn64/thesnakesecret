@@ -1,0 +1,9 @@
+.startscreen {
+    width: 418px;
+    height: 418px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center; 
+    border: 2px solid black;
+}
