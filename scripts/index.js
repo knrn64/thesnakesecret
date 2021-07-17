@@ -67,12 +67,15 @@ class sound {
     }
 }
 
+failSound = new sound("audio/fail-sound.mp3");
+eatSound = new sound("audio/eat-sound.mp3");
+bgmMusic = new sound("audio/bgm-music.mp3");
+
 function startGame(e) {
     if (e.key === 'Enter') {
         startscreen.style.display = "none";
         canvas.style.display = "block";
 
-        bgmMusic = new sound("audio/bgm-music.mp3");
         bgmMusic.volume = "0.1";
         bgmMusic.play();
         bgmMusic.sound.setAttribute("loop", "");
@@ -124,10 +127,6 @@ function drawGame() {
 
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
-
-    failSound = new sound("audio/fail-sound.mp3");
-    eatSound = new sound("audio/eat-sound.mp3");
-
 
     for (let i = 0; i < snake.length; i++) {
         // ctx.fillStyle = i == 0 ? "green" : "red";
@@ -205,6 +204,5 @@ function restart() {
 
     drawGame();
 }
-
 
 let game = setInterval(drawGame, 100);
