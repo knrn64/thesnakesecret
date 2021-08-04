@@ -13,31 +13,32 @@ ground.src = "img/background.gif";
 const headImg = new Image();
 headImg.src = "img/head-front.gif";
 
-function createFoodImg(src) {
-    const img = new Image(22, 22);
-    img.src = src;
-    return img;
-}
+const foodImg = new Image();
+foodImg.src = "img/food.gif";
 
-function selectRandomFood(foodArray) {
-    const index = Math.floor(Math.random() * foodArray.length);
-    return foodArray[index];
-}
+// const bananaImg = new Image();
+// bananaImg.src = "img/banana.gif";
 
-const foodImages = [
-    createFoodImg('img/peach.gif'),
-    createFoodImg('img/banana.gif'),
-    createFoodImg('img/cherry.gif'),
-    createFoodImg('img/gum.gif'),
-];
+// const gumImg = new Image();
+// gumImg.src = "img/gum.gif";
+
+// const cherryImg = new Image();
+// cherryImg.src = "img/cherry.gif";
+
+// const peachImg = new Image();
+// peachImg.src = "img/peach.gif";
+
+// const foodArray = ["bananaImg", "gumImg", "cherryImg", "peachImg"];
+
+//let randomFoodImg = foodArray[Math.floor(Math.random() * foodArray.length)];
 
 let box = 22;
+
 let score = 0;
 
 let food = {
     x: Math.floor((Math.random() * 17 + 1)) * box, // почему не работает Math.random() * (max - min)
     y: Math.floor((Math.random() * 15 + 3)) * box,
-    image: selectRandomFood(foodImages),
 };
 
 let snake = [];
@@ -117,7 +118,8 @@ function eatTail(head, arr) {
 
 function drawGame() {
     ctx.drawImage(ground, 0, 0, 418, 418);
-    ctx.drawImage(food.image, food.x, food.y);
+
+    ctx.drawImage(foodImg, food.x, food.y);
 
     ctx.fillStyle = "black";
     ctx.font = "14px Arial";
@@ -151,7 +153,6 @@ function drawGame() {
         food = {
             x: Math.floor((Math.random() * 17 + 1)) * box,
             y: Math.floor((Math.random() * 15 + 3)) * box,
-            image: selectRandomFood(foodImages)
         };
     } else
         snake.pop();
@@ -180,6 +181,8 @@ function drawGame() {
 function restart() {
     failSound.play();
 
+    //console.log("function has been executed");
+
     score = 0;
     dir = "";
 
@@ -192,7 +195,6 @@ function restart() {
     food = {
         x: Math.floor((Math.random() * 17 + 1)) * box,
         y: Math.floor((Math.random() * 15 + 3)) * box,
-        image: selectRandomFood(foodImages)
     };
 
     ctx.clearRect(0, 0, canvas.context.width, canvas.context.height);
