@@ -26,7 +26,9 @@ function selectRandomFood(foodArray) {
 
 const foodImages = [
     createFoodImg('img/peach.gif'),
-    createFoodImg('img/food.gif')
+    createFoodImg('img/banana.gif'),
+    createFoodImg('img/cherry.gif'),
+    createFoodImg('img/gum.gif'),
 ];
 
 let box = 22;
@@ -35,7 +37,7 @@ let score = 0;
 let food = {
     x: Math.floor((Math.random() * 17 + 1)) * box, // почему не работает Math.random() * (max - min)
     y: Math.floor((Math.random() * 15 + 3)) * box,
-    image: selectRandomFood(foodImages)
+    image: selectRandomFood(foodImages),
 };
 
 let snake = [];
@@ -177,8 +179,6 @@ function drawGame() {
 
 function restart() {
     failSound.play();
-
-    //console.log("function has been executed");
 
     score = 0;
     dir = "";
