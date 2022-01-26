@@ -32,6 +32,6 @@ Thanks to Igor @tifgor for supporting me when I was heavily sick.
 
 Thanks you @btshft for advice and helping me make the random fruit feature.
 
-Thanks to Liza, Sasha, Pasha, Polina, and Marina for being the first testers, your feedback and supporting me.
+Thanks to @btshft, Liza, Sasha, Pasha, Polina, and Marina for being the first testers, your feedback and supporting me.
 
 🤍
