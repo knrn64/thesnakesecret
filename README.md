@@ -2,14 +2,14 @@
 # The Snake Secret
 
 This is a birthday gift to my good friend Igor who's making an awesome chiptune music project [Yeltsin is Illuminati](https://yeltsinisilluminati.bandcamp.com/), and one of the albums is called [Gum Secret (Russian: Жвачный секрет)](https://yeltsinisilluminati.bandcamp.com/album/-). The snake character with the cat face is referencing the character from the album cover.
-<p align="center"><img src="https://konerini.github.io/thesnakesecret/img/title-screen.gif" alt="Snake Secret start screen" width="300"/>
+<p align="center"><img src="https://knrn64.github.io/thesnakesecret/img/title-screen.gif" alt="Snake Secret start screen" width="300"/>
 <img src="https://f4.bcbits.com/img/a0362229224_16.jpg" alt="Gum Secret album cover" width="300"/></p>
 
 # Try the game
 
 *(be aware of the loud music though! the issue is being fixed.....)*
 
-https://knrn-ai.github.io/thesnakesecret/
+https://knrn64.github.io/thesnakesecret/
 
 # Implementation
 
